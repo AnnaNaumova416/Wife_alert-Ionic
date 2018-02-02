@@ -1,0 +1,21 @@
+<ion-content class="page">
+  <h1>Wife Alert</h1>
+  <div class="loader"></div>
+
+  <div class="bottom-container">
+    <ion-label color='secondary'>Langitude:{{latitude}}</ion-label>
+    <ion-label color='secondary'>Latitude:{{longitude}}</ion-label>
+    <button ion-button medium outline block (click)='getPosition()' color='primary'>Get Position</button>
+
+    <ion-item>
+      <ion-range [(ngModel)]='radius' #radiusVal min='1' max='100' color='primary' pin='true' snaps='true' step='5'>
+      </ion-range>
+    </ion-item>
+    <ion-label color='secondary' id='lbl'>Fence Parameter: {{ radius }}(Meters)</ion-label>
+    <button ion-button medium outline block (click)='setGeofence(radiusVal.value)' id="cta" color='primary'>Set Geofence</button>
+
+    
+
+    <p *ngIf='error'>{{error}}</p>
+  </div>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "wife_alert",
+  "app_id": "7b9c13e0",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
